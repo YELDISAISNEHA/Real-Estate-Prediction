@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: home-price-predictions
+    env: python
+    buildCommand: pip install -r Backend/requirements.txt
+    startCommand: python Backend/server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
