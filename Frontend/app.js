@@ -25,7 +25,7 @@ function onClickedEstimatePrice(){
     });
 }
 function onPageLoad() {
-    fetch('/get_location_names')
+    fetch('https://real-estate-prediction-1ae2.onrender.com/get_location_names')
         .then(response => response.json())
         .then(data => {
             const locations = data.locations;
