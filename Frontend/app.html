@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banglore Home Price Prediction</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="img">
+    <div class="container">
+        <h2 class="title">Banglore Home Price Prediction</h2>
+    <form class="form">
+        <h3>Area (Square Feet)</h3>
+        <input class="area" type="number" id="uiSqft" name="Squareft" placeholder="Enter Sqft" required>
+        <h3>BHK</h3>
+        <div class="select-field">
+            <select class="form-input" name="bhk" id="uiBHK" required>
+                <option value="" disabled selected>Select BHK</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <h3>Bath</h3>
+        <div class="select-field">
+            <select class="form-input" name="bath" id="uiBathrooms" required>
+                <option value="" disabled selected>Select Bathrooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <h3>Location</h3>
+        <div class="location-field">
+            <select class="form-input" name="location" id="uiLocations" required>
+                <option value="" disabled selected>Choose a Location</option>
+            </select>
+        </div>
+        <button class="submit" onclick="onClickedEstimatePrice()" type="button">Predict</button>
+        <h3>Estimated Price</h3>
+        <div id="uiEstimatedPrice" class="result"> <h5></h5></div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
