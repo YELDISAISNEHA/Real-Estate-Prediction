@@ -6,7 +6,7 @@ function onClickedEstimatePrice(){
     const location = document.getElementById("uiLocations").value;
     const estPrice = document.getElementById("uiEstimatedPrice");
     const button = document.querySelector(".submit");
-    const url = "https://home-price-predictions.onrender.com/predict_home_price";
+    const url = "/predict_home_price";
 
     if (!sqft || !bhk || !bath || !location) {
         alert("Please fill in all the fields.");
@@ -25,7 +25,7 @@ function onClickedEstimatePrice(){
     });
 }
 function onPageLoad() {
-    fetch('https://home-price-predictions.onrender.com/get_location_names')
+    fetch('/get_location_names')
         .then(response => response.json())
         .then(data => {
             const locations = data.locations;
